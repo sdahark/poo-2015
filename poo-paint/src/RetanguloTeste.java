@@ -3,7 +3,6 @@ import org.junit.Test;
 
 
 public class RetanguloTeste {
-
 	@Test
 	public void testaImprime() {
 		Retangulo r = new Retangulo(31, 31, 50, 40);
@@ -15,6 +14,7 @@ public class RetanguloTeste {
 
 	@Test
 	public void testaContadorDeInstancias() {
+		Retangulo.zerainstancias();
 		Assert.assertEquals(0, Retangulo.instancias());
 		
 		Retangulo r1 = new Retangulo(31, 31, 50, 40);
