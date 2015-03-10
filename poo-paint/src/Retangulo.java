@@ -27,4 +27,9 @@ public class Retangulo {
 		return cont;
 	}
 
+	public static boolean igual(Retangulo r1, Retangulo r2, Retangulo r3, Retangulo r4) {
+	
+		return ();
+	}
+
 }
