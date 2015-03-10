@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace csharp2
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("modifiquei o código");
+            Program program = new Program();
+            Console.WriteLine(program.SayHello());
+        }
+
+        public string SayHello() {
+            return "hello";
         }
     }
 }
