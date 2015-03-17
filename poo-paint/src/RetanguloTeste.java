@@ -34,3 +34,4 @@ public class RetanguloTeste {
 		Assert.assertEquals(true, Retangulo.igual(r3, r4));
 
 }
+}

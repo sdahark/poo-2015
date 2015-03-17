@@ -1,4 +1,3 @@
-
 public class Retangulo {
 
 	int x;
@@ -27,9 +26,8 @@ public class Retangulo {
 		return cont;
 	}
 
-	public static boolean igual(Retangulo r1, Retangulo r2, Retangulo r3, Retangulo r4) {
-	
-		return ();
+	public static boolean igual(Retangulo r1, Retangulo r2) {	
+		return (r1.x == r2.x && r1.y == r2.y && r1.altura == r2.altura && r1.largura == r2.largura);
 	}
 
 }
