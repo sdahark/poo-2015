@@ -18,7 +18,7 @@ public class Paint extends JFrame {
 		Circulo c = new Circulo(200, 500, 56);
 		
 		Figura[] figuras = new Figura[]{ret1, ret2, c};
-		AreaDeDesenho areaDeDesenho = new AreaDeDesenho(figuras);
+		AreaDeDesenho areaDeDesenho = new AreaDeDesenho(/*figuras*/);
 		this.setContentPane(areaDeDesenho);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.pack();
