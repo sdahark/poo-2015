@@ -1,5 +1,7 @@
 package figuras;
 
+import java.awt.Graphics;
+
 public class Retangulo extends Figura {
 
 	private int altura;
@@ -21,6 +23,11 @@ public class Retangulo extends Figura {
 
 	public int getLargura() {
 		return largura;
+	}
+
+	@Override
+	public void desenha(Graphics g) {
+		g.drawRect(x, y, largura, altura);
 	}
 
 }

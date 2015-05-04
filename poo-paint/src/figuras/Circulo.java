@@ -1,5 +1,7 @@
 package figuras;
 
+import java.awt.Graphics;
+
 public class Circulo extends Figura {
 
 	private int raio = 0;
@@ -17,4 +19,8 @@ public class Circulo extends Figura {
 		return raio;
 	}
 
+	@Override
+	public void desenha(Graphics g) {
+		g.drawOval(x, y, raio * 2, raio * 2);
+	}
 }

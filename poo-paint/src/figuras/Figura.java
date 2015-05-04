@@ -1,5 +1,7 @@
 package figuras;
 
+import java.awt.Graphics;
+
 public class Figura {
 
 	protected int x;
@@ -28,5 +30,9 @@ public class Figura {
 
 	public void setY(int y) {
 		this.y = y;
+	}
+	
+	public void desenha(Graphics g) {
+		//
 	}
 }
