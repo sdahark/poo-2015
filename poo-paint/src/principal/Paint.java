@@ -29,7 +29,10 @@ public class Paint extends JFrame {
 		AreaDeDesenho areaDeDesenho = new AreaDeDesenho(figuras);
 		Eventos e = new Eventos(areaDeDesenho); 
 		areaDeDesenho.addMouseListener(e);
-		this.setContentPane(areaDeDesenho);
+		Layout painel = new Layout();
+		painel.add(areaDeDesenho);
+		this.setContentPane(painel);
+		
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.pack();
 		this.setVisible(true);
