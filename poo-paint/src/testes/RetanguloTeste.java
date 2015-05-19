@@ -36,4 +36,6 @@ public class RetanguloTeste {
 		Assert.assertEquals("retangulo[X:14,Y:9,l:35,a:67]", r2.imprime());
 	}
 	
+
 }
+
