@@ -17,7 +17,7 @@ public class Layout extends JPanel{
 	
 	//Componentes
 	private JPanel painel = new JPanel();
-	private JToolBar toolbar = new JToolBar (" Ferramentas "); 
+	private JToolBar toolbar = new JToolBar ("Ferramentas"); 
 	private ButtonGroup grupo = new ButtonGroup();
 	private JToggleButton circulo = new JToggleButton ("circulo");  
 	private JToggleButton retangulo = new JToggleButton ("retangulo");  

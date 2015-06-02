@@ -2,6 +2,7 @@ package principal;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JPanel;
@@ -12,8 +13,8 @@ public class AreaDeDesenho extends JPanel {
 
 	private List<Figura> figuras;
 	
-	public AreaDeDesenho(List<Figura> figuras) {
-		this.figuras = figuras;
+	public AreaDeDesenho() {
+		this.figuras = new ArrayList<Figura>();
 		this.setPreferredSize(new Dimension(600, 400));
 	}
 
@@ -24,11 +25,10 @@ public class AreaDeDesenho extends JPanel {
 		for (Figura f : figuras) {
 			f.desenha(g);
 		}
-	
 	}
-	public void setFigura (Figura figura){
-		this.figuras.add(figura);
-		this.repaint();
+
+	public void adicionaFigura(Figura f) {
+		this.figuras.add(f);
 	}
 
 }
