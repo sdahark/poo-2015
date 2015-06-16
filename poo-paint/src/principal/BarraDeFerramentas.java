@@ -1,5 +1,9 @@
 package principal;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
@@ -8,6 +12,7 @@ public class BarraDeFerramentas extends JToolBar {
 
 	ButtonGroup grupo;
 	private Ferramenta ferramenta;
+	
 	
 	public BarraDeFerramentas() {
 		super("Barra de Ferramentas");
@@ -23,6 +28,7 @@ public class BarraDeFerramentas extends JToolBar {
 		}
 		this.setFloatable(false);
 	}
+	
 
 	private JToggleButton criarBotao(Ferramenta ferramenta) {
 		JToggleButton botao = new JToggleButton(ferramenta.getNome());

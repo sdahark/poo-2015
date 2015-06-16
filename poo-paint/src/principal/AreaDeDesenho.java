@@ -17,7 +17,6 @@ public class AreaDeDesenho extends JPanel {
 		this.figuras = new ArrayList<Figura>();
 		this.setPreferredSize(new Dimension(600, 400));
 	}
-
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);

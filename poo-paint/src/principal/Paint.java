@@ -1,32 +1,48 @@
 package principal;
 
 import java.awt.BorderLayout;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Paint extends JFrame {
+import figuras.Circulo;
+import figuras.Figura;
+import figuras.Retangulo;
 
+public class Paint extends JFrame {
+	
 	public static void main(String[] args) {
 		Paint aplicacao = new Paint();
 	}
 
 	public Paint() {
-		JPanel painelPrincipal = new JPanel();
-		painelPrincipal.setLayout(new BorderLayout());
+		// Criar algumas figuras que serão desenhadas
+		List<Figura> figuras = new ArrayList<Figura>();
 		
-		BarraDeFerramentas barraDeFerramentas = new BarraDeFerramentas(); 
-		painelPrincipal.add(barraDeFerramentas, BorderLayout.PAGE_START);
+		Figura r = new Retangulo(78, 45, 55, 40);
+		Figura r2 = new Retangulo(15, 40, 50, 30);
+		Figura c = new Circulo(45, 195, 52);
+		Figura c2 = new Circulo(65, 293, 87);
 		
+		JPanel painel  = new JPanel();
+		painel.setLayout( new BorderLayout());
+		BarraDeFerramentas barra = new BarraDeFerramentas();
+		painel.add(barra, BorderLayout.NORTH);
 		AreaDeDesenho areaDeDesenho = new AreaDeDesenho();
-		painelPrincipal.add(areaDeDesenho, BorderLayout.CENTER);
 		
-		GerenciadorDeEventos gerenciador = new GerenciadorDeEventos(areaDeDesenho, barraDeFerramentas);
-		areaDeDesenho.addMouseListener(gerenciador);
+		Mouse mouse = new Mouse(areaDeDesenho, barra);
 		
-		this.setContentPane(painelPrincipal);
+		areaDeDesenho.addMouseListener(mouse);
+		
+		painel.add(areaDeDesenho, BorderLayout.CENTER);
+		
+		this.setContentPane(painel);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.pack();
 		this.setVisible(true);
 	}
+
+	
 }

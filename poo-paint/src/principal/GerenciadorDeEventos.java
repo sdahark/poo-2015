@@ -20,7 +20,7 @@ public class GerenciadorDeEventos extends MouseAdapter {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		Ferramenta ferramenta = barraDeFerramentas.leFerramentaSelecionada();
-		Figura f = ferramenta.criaFigura(e.getX(), e.getY());
+		Figura f = ferramenta.criaFigura(e.getX(), e.getY(), 0, 0);
 		this.area.adicionaFigura(f);
 		this.area.repaint();
 	}
