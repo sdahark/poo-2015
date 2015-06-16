@@ -2,32 +2,41 @@ package principal;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JPanel;
 
+import figuras.Circulo;
 import figuras.Figura;
+import figuras.Retangulo;
 
 public class AreaDeDesenho extends JPanel {
 
-	private List<Figura> figuras;
-	
-	public AreaDeDesenho() {
-		this.figuras = new ArrayList<Figura>();
+	private List<Figura> figuras; 
+    private Figura figura;
+	public AreaDeDesenho(List<Figura> f) {
 		this.setPreferredSize(new Dimension(600, 400));
+		this.figuras = f;
 	}
-	@Override
-	protected void paintComponent(Graphics g) {
+
+	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
 		// desenha algumas figuras
-		for (Figura f : figuras) {
+		for(Figura f : figuras ){
 			f.desenha(g);
 		}
 	}
 
-	public void adicionaFigura(Figura f) {
-		this.figuras.add(f);
+	public void addFigura(Figura figura) {
+		this.figura = figura;
+		this.figuras.add(figura);
 	}
-
+	
+	public void remove(Figura f) {
+		this.figuras.remove(f);
+	}
+	
+	public void atualiza() {
+		figuras.remove(this.figura);
+	}
 }

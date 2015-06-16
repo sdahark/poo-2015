@@ -30,7 +30,7 @@ public class BarraDeFerramentas extends JToolBar {
 	}
 	
 
-	private JToggleButton criarBotao(Ferramenta ferramenta) {
+	private void criarBotao(Ferramenta ferramenta) {
 		JToggleButton botao = new JToggleButton(ferramenta.getNome());
 		botao.addActionListener(ferramenta);
 		grupo.add(botao);
@@ -39,7 +39,6 @@ public class BarraDeFerramentas extends JToolBar {
 			botao.getModel().setPressed(true);
 			this.ferramenta = ferramenta;
 		}
-		return botao;
 	}
 	
 	public Ferramenta leFerramentaSelecionada() {

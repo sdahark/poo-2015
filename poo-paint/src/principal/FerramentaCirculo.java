@@ -11,7 +11,7 @@ public class FerramentaCirculo extends Ferramenta {
 
 	@Override
 	public Figura criaFigura(int x, int y, int x2 ,int y2) {
-		return new Circulo(x,y ,y2);
+		return new Circulo(x,y ,x2,y2);
 	}
 
 	@Override

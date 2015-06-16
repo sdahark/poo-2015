@@ -24,10 +24,10 @@ public class RetanguloTeste {
 	@Test
 	public void testaHerança() {
 		Retangulo r = new Retangulo(31, 31, 40, 50);
-		Circulo c = new Circulo (31, 56, 20);
+		//Circulo c = new Circulo (31, 56, 20);
 		
 		Figura f1 = r;
-		Figura f2 = c;
+		//Figura f2 = c;
 		
 		String saida = r.imprime();
 		Assert.assertEquals("retangulo[X:31,Y:31,l:40,a:50]", saida);
